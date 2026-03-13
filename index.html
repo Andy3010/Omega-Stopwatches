@@ -2,53 +2,53 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Omega Stoppuhren</title>
+<title>Omega Stopwatch Archive</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="topbar">
-<div class="logo">OMEGA ARCHIVE</div>
-<div class="menu-btn" onclick="openMenu()">☰</div>
-</div>
+<header>
+<h1>Omega Stopwatch Archive</h1>
 
-<div id="sidebar" class="sidebar">
+<p>
+Eine strukturierte Referenz historischer mechanischer Stoppuhren
+im Kontext professioneller Zeitmessung.
+</p>
+
+<nav>
 <a href="index.html">Start</a>
 <a href="sammlung.html">Sammlung</a>
 <a href="galerie.html">Galerie</a>
-<a href="#" onclick="closeMenu()">Schließen</a>
+</nav>
+</header>
+
+<section class="container">
+
+<div class="grid">
+
+<div class="card">
+<h3>Sammlung</h3>
+<p>Dokumentierte Modelle mit technischen Angaben.</p>
 </div>
 
-<div class="content">
-
-<h1>Sammlung historischer Stoppuhren</h1>
-
-<div class="search-box">
-<input type="text" id="search" onkeyup="searchFunction()" placeholder="Modelle suchen...">
+<div class="card">
+<h3>Galerie</h3>
+<p>Visuelle Referenz hochwertiger Exemplare.</p>
 </div>
 
-<p>
-Referenzseite für mechanische Zeitmesser von
-:contentReference[oaicite:2]{index=2}.
-</p>
+<div class="card">
+<h3>Historischer Kontext</h3>
+<p>Einordnung in Sport- und Zeitmessgeschichte.</p>
+</div>
 
 </div>
 
-<script>
-function openMenu(){
-document.getElementById("sidebar").style.left="0";
-}
+</section>
 
-function closeMenu(){
-document.getElementById("sidebar").style.left="-250px";
-}
-
-function searchFunction(){
-let input=document.getElementById("search").value.toLowerCase();
-alert("Suchfunktion kann hier erweitert werden: "+input);
-}
-</script>
+<footer>
+© 2026 – Stopwatch Reference Project
+</footer>
 
 </body>
 </html>
