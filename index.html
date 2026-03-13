@@ -2,56 +2,53 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Omega Stopwatch Archive</title>
+<title>Omega Stoppuhren</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-<h1>OMEGA STOPWATCH ARCHIVE</h1>
+<div class="topbar">
+<div class="logo">OMEGA ARCHIVE</div>
+<div class="menu-btn" onclick="openMenu()">☰</div>
+</div>
 
-<nav>
+<div id="sidebar" class="sidebar">
 <a href="index.html">Start</a>
-<a href="modelle.html">Modelle</a>
+<a href="sammlung.html">Sammlung</a>
 <a href="galerie.html">Galerie</a>
-</nav>
-</header>
+<a href="#" onclick="closeMenu()">Schließen</a>
+</div>
 
-<section class="hero">
-<h2>Offizielle Zeitmessung & Historische Referenz</h2>
+<div class="content">
+
+<h1>Sammlung historischer Stoppuhren</h1>
+
+<div class="search-box">
+<input type="text" id="search" onkeyup="searchFunction()" placeholder="Modelle suchen...">
+</div>
+
 <p>
-Archivierte Dokumentation mechanischer Stoppuhren im Kontext
-internationaler Sportzeitnahme und olympischer Präzision.
+Referenzseite für mechanische Zeitmesser von
+:contentReference[oaicite:2]{index=2}.
 </p>
-</section>
-
-<section class="container">
-
-<div class="grid">
-
-<div class="card">
-<h3>Modellarchiv</h3>
-<p>Strukturierte Übersicht historischer Ausführungen.</p>
-</div>
-
-<div class="card">
-<h3>Visuelle Galerie</h3>
-<p>Hochwertige Präsentation der Sammlerexemplare.</p>
-</div>
-
-<div class="card">
-<h3>Technische Daten</h3>
-<p>Kaliber, Varianten und Spezifikationen.</p>
-</div>
 
 </div>
 
-</section>
+<script>
+function openMenu(){
+document.getElementById("sidebar").style.left="0";
+}
 
-<footer>
-© 2026 – Olympic Timing Reference Project
-</footer>
+function closeMenu(){
+document.getElementById("sidebar").style.left="-250px";
+}
+
+function searchFunction(){
+let input=document.getElementById("search").value.toLowerCase();
+alert("Suchfunktion kann hier erweitert werden: "+input);
+}
+</script>
 
 </body>
 </html>
