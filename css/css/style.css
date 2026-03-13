@@ -1,39 +1,43 @@
 :root{
-  --bg:#0f172a;
-  --card:#111827;
-  --accent:#c9a227;
-  --text:#e5e7eb;
-  --light:#ffffff;
+  --primary:#0B1C2D;
+  --secondary:#102A43;
+  --accent:#C6A75E;
+  --bg:#F2F4F7;
+  --text:#111;
 }
 
 body{
   margin:0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background:#f3f4f6;
-  color:#111;
+  background:var(--bg);
+  color:var(--text);
 }
 
+/* Header */
+
 header{
-  background:var(--bg);
-  color:var(--light);
-  padding:40px 20px;
+  background:linear-gradient(135deg, var(--primary), var(--secondary));
+  color:white;
+  padding:50px 20px;
   text-align:center;
 }
 
 header h1{
   margin:0;
-  font-size:2.2rem;
-  letter-spacing:1px;
+  font-size:2.4rem;
+  letter-spacing:2px;
 }
+
+/* Navigation */
 
 nav{
   margin-top:20px;
 }
 
 nav a{
-  color:var(--light);
+  color:white;
   text-decoration:none;
-  margin:0 15px;
+  margin:0 18px;
   font-weight:600;
   transition:0.3s;
 }
@@ -42,9 +46,10 @@ nav a:hover{
   color:var(--accent);
 }
 
+/* Hero */
+
 .hero{
-  background:linear-gradient(to right, #111827, #1f2937);
-  color:white;
+  background:white;
   padding:80px 20px;
   text-align:center;
 }
@@ -54,40 +59,56 @@ nav a:hover{
   margin-bottom:15px;
 }
 
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:1.1rem;
+}
+
+/* Container */
+
 .container{
   max-width:1200px;
   margin:auto;
-  padding:50px 20px;
+  padding:60px 20px;
 }
+
+/* Grid */
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:30px;
 }
+
+/* Cards */
 
 .card{
   background:white;
-  padding:20px;
+  padding:25px;
   border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  border-top:4px solid var(--accent);
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
-.card img{
+/* Images */
+
+img{
   width:100%;
   border-radius:10px;
-  margin-bottom:15px;
 }
 
+/* Footer */
+
 footer{
-  background:#111827;
+  background:var(--primary);
   color:white;
   text-align:center;
-  padding:30px;
+  padding:35px;
   margin-top:60px;
 }
